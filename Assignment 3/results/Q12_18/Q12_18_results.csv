@@ -1,0 +1,17 @@
+question,part,quantity,value,unit,solver_status
+Q12_18,a,T_bubble,335.82132,K,converged (brentq)
+Q12_18,a,T_bubble,62.671325,degC,converged (brentq)
+Q12_18,a,y_acetone,0.80428507,-,converged (brentq)
+Q12_18,a,y_water,0.19571493,-,converged (brentq)
+Q12_18,b,T_dew,363.74849,K,converged (brentq)
+Q12_18,b,T_dew,90.59849,degC,converged (brentq)
+Q12_18,b,x_acetone,0.012501066,-,converged (brentq)
+Q12_18,b,x_water,0.98749893,-,converged (brentq)
+Q12_18,c,flash pressure,101.33,kPa,converged
+Q12_18,c,flash temperature,349.78491,K,converged
+Q12_18,c,vapour fraction V,0.44876451,mol/mol,converged
+Q12_18,c,x_acetone,0.049456608,-,converged
+Q12_18,c,x_water,0.95054339,-,converged
+Q12_18,c,y_acetone,0.60775252,-,converged
+Q12_18,c,y_water,0.39224748,-,converged
+Q12_18,d,azeotrope exists,0,(0 = no),scan of 300 points: no sign change of y1-x1

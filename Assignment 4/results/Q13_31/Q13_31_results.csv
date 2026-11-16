@@ -1,0 +1,8 @@
+question,part,quantity,value,unit,solver_status
+Q13_31,-,K,1.4969323,-,explicit
+Q13_31,-,"xB, non-ideal solution (G^E/RT = 0.1 xA xB)",0.60451683,-,converged (brentq)
+Q13_31,-,"xA, non-ideal solution",0.39548317,-,converged (brentq)
+Q13_31,-,"xB, ideal solution",0.59950857,-,explicit
+Q13_31,-,"xA, ideal solution",0.40049143,-,explicit
+Q13_31,-,error in xB from assuming ideal solution,-0.0050082573,mole fraction,explicit
+Q13_31,-,relative error in xB,-0.82847277,%,explicit

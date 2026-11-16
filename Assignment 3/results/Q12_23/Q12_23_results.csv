@@ -1,0 +1,20 @@
+question,part,quantity,value,unit,solver_status
+Q12_23,a,T_bubble,330.92346,K,converged (brentq)
+Q12_23,a,T_bubble,57.773458,degC,converged (brentq)
+Q12_23,a,y_acetone,0.39135674,-,converged (brentq)
+Q12_23,a,y_methanol,0.45170301,-,converged (brentq)
+Q12_23,a,y_water,0.15694025,-,converged (brentq)
+Q12_23,b,T_dew,343.3865,K,converged (brentq)
+Q12_23,b,T_dew,70.236503,degC,converged (brentq)
+Q12_23,b,x_acetone,0.0271612,-,converged (brentq)
+Q12_23,b,x_methanol,0.018444583,-,converged (brentq)
+Q12_23,b,x_water,0.95439422,-,converged (brentq)
+Q12_23,c,flash pressure,101.33,kPa,converged
+Q12_23,c,flash temperature,337.15498,K,converged
+Q12_23,c,vapour fraction V,0.5933926,mol/mol,converged
+Q12_23,c,x_acetone,0.069462635,-,converged
+Q12_23,c,x_methanol,0.024886484,-,converged
+Q12_23,c,x_water,0.90565088,-,converged
+Q12_23,c,y_acetone,0.45796995,-,converged
+Q12_23,c,y_methanol,0.31999215,-,converged
+Q12_23,c,y_water,0.22203791,-,converged

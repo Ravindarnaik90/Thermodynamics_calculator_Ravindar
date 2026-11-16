@@ -1,0 +1,18 @@
+question,part,quantity,value,unit,solver_status
+Q12_20,a,P_bubble,113.49195,kPa,explicit
+Q12_20,a,y_acetone,0.55167127,-,explicit
+Q12_20,a,y_methanol,0.3533631,-,explicit
+Q12_20,a,y_water,0.094965626,-,explicit
+Q12_20,b,P_dew,64.864676,kPa,converged (damped successive substitution)
+Q12_20,b,x_acetone,0.039121463,-,converged (damped successive substitution)
+Q12_20,b,x_methanol,0.24127999,-,converged (damped successive substitution)
+Q12_20,b,x_water,0.71959855,-,converged (damped successive substitution)
+Q12_20,c,flash pressure,89.178312,kPa,converged
+Q12_20,c,flash temperature,338.15,K,converged
+Q12_20,c,vapour fraction V,0.61108169,mol/mol,converged
+Q12_20,c,x_acetone,0.11879466,-,converged
+Q12_20,c,x_methanol,0.3755577,-,converged
+Q12_20,c,x_water,0.50564764,-,converged
+Q12_20,c,y_acetone,0.41532676,-,converged
+Q12_20,c,y_methanol,0.41555612,-,converged
+Q12_20,c,y_water,0.16911712,-,converged

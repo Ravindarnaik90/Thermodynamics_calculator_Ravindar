@@ -1,0 +1,92 @@
+{
+ "question": "Q12_22",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(6.4e-14 kPa)"
+  },
+  {
+   "name": "bubble equation residual",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve BUBL T agrees",
+   "passed": true,
+   "detail": "(334.948375 vs 334.948375 K)"
+  },
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(4.1e-12 kPa)"
+  },
+  {
+   "name": "dew equation residual",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve DEW T agrees",
+   "passed": true,
+   "detail": "(349.089086 vs 349.089086 K)"
+  },
+  {
+   "name": "T_bubble < T_dew",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "flash converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= V <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1 and sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= x_i, y_i <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "component material balance z_i = V y_i + (1-V) x_i",
+   "passed": true,
+   "detail": "(max err 1.1e-16)"
+  },
+  {
+   "name": "equilibrium y_i = K_i x_i  (Eq. 10.5 residual)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve flash (different algorithm/start) agrees",
+   "passed": true,
+   "detail": "(V 0.38446825 vs 0.38446825)"
+  }
+ ],
+ "notes": [
+  "In (c) the assignment image prints z2 = 0.2 (whereas Q12.20(c) uses z2 = 0.4). Used as printed: z = (0.3, 0.2, 0.5). Confirm with your handout.",
+  "Antoine for acetone used at 61.80 C , outside stated range -13.0..55.0 C (extrapolation).",
+  "Antoine for acetone used at 75.94 C , outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}

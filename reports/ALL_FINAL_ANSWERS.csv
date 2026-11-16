@@ -1,0 +1,173 @@
+question,part,quantity,value,unit,solver_status
+Q12_12,diagram,P_sat water,20.007045,kPa,explicit (Antoine)
+Q12_12,diagram,P_sat acetone,115.15569,kPa,explicit (Antoine)
+Q12_12,diagram,diagram points,51,-,all points converged
+Q12_13,diagram,T_sat water,373.14911,K,explicit (inverse Antoine)
+Q12_13,diagram,T_sat acetone,329.35017,K,explicit (inverse Antoine)
+Q12_13,diagram,diagram points,51,-,all brentq solves converged
+Q12_14,diagram,P_sat water,20.007045,kPa,explicit (Antoine)
+Q12_14,diagram,P_sat acetone,115.15569,kPa,explicit (Antoine)
+Q12_14,diagram,diagram points,51,-,all points converged
+Q12_15,diagram,T_sat water,373.14911,K,explicit (inverse Antoine)
+Q12_15,diagram,T_sat acetone,329.35017,K,explicit (inverse Antoine)
+Q12_15,diagram,diagram points,51,-,all brentq solves converged
+Q12_16,a,P_bubble,92.6433,kPa,explicit
+Q12_16,a,y_acetone,0.81040265,-,explicit
+Q12_16,a,y_water,0.18959735,-,explicit
+Q12_16,b,P_dew,28.380141,kPa,converged (damped successive substitution)
+Q12_16,b,x_acetone,0.0073422528,-,converged (damped successive substitution)
+Q12_16,b,x_water,0.99265775,-,converged (damped successive substitution)
+Q12_16,c,flash pressure,60.51172,kPa,converged
+Q12_16,c,flash temperature,333.15,K,converged
+Q12_16,c,vapour fraction V,0.38983988,mol/mol,converged
+Q12_16,c,x_acetone,0.055134935,-,converged
+Q12_16,c,x_water,0.94486506,-,converged
+Q12_16,c,y_acetone,0.68325196,-,converged
+Q12_16,c,y_water,0.31674804,-,converged
+Q12_16,d,azeotrope exists,0,(0 = no),scan of 600 points: no sign change of y1-x1
+Q12_17,a,P_bubble,91.729357,kPa,explicit
+Q12_17,a,y_acetone,0.80722216,-,explicit
+Q12_17,a,y_water,0.19277784,-,explicit
+Q12_17,b,P_dew,28.379278,kPa,converged (damped successive substitution)
+Q12_17,b,x_acetone,0.0073423356,-,converged (damped successive substitution)
+Q12_17,b,x_water,0.99265766,-,converged (damped successive substitution)
+Q12_17,c,flash pressure,60.054317,kPa,converged
+Q12_17,c,flash temperature,333.15,K,converged
+Q12_17,c,vapour fraction V,0.3945589,mol/mol,converged
+Q12_17,c,x_acetone,0.052091857,-,converged
+Q12_17,c,x_water,0.94790814,-,converged
+Q12_17,c,y_acetone,0.68040906,-,converged
+Q12_17,c,y_water,0.31959094,-,converged
+Q12_17,d,azeotrope exists,0,(0 = no),scan of 600 points: no sign change of y1-x1
+Q12_18,a,T_bubble,335.82132,K,converged (brentq)
+Q12_18,a,T_bubble,62.671325,degC,converged (brentq)
+Q12_18,a,y_acetone,0.80428507,-,converged (brentq)
+Q12_18,a,y_water,0.19571493,-,converged (brentq)
+Q12_18,b,T_dew,363.74849,K,converged (brentq)
+Q12_18,b,T_dew,90.59849,degC,converged (brentq)
+Q12_18,b,x_acetone,0.012501066,-,converged (brentq)
+Q12_18,b,x_water,0.98749893,-,converged (brentq)
+Q12_18,c,flash pressure,101.33,kPa,converged
+Q12_18,c,flash temperature,349.78491,K,converged
+Q12_18,c,vapour fraction V,0.44876451,mol/mol,converged
+Q12_18,c,x_acetone,0.049456608,-,converged
+Q12_18,c,x_water,0.95054339,-,converged
+Q12_18,c,y_acetone,0.60775252,-,converged
+Q12_18,c,y_water,0.39224748,-,converged
+Q12_18,d,azeotrope exists,0,(0 = no),scan of 300 points: no sign change of y1-x1
+Q12_19,a,T_bubble,336.01912,K,converged (brentq)
+Q12_19,a,T_bubble,62.869119,degC,converged (brentq)
+Q12_19,a,y_acetone,0.80136184,-,converged (brentq)
+Q12_19,a,y_water,0.19863816,-,converged (brentq)
+Q12_19,b,T_dew,363.7631,K,converged (brentq)
+Q12_19,b,T_dew,90.613096,degC,converged (brentq)
+Q12_19,b,x_acetone,0.012946016,-,converged (brentq)
+Q12_19,b,x_water,0.98705398,-,converged (brentq)
+Q12_19,c,flash pressure,101.33,kPa,converged
+Q12_19,c,flash temperature,349.89111,K,converged
+Q12_19,c,vapour fraction V,0.45168861,mol/mol,converged
+Q12_19,c,x_acetone,0.047897944,-,converged
+Q12_19,c,x_water,0.95210206,-,converged
+Q12_19,c,y_acetone,0.60603036,-,converged
+Q12_19,c,y_water,0.39396964,-,converged
+Q12_19,d,azeotrope exists,0,(0 = no),scan of 300 points: no sign change of y1-x1
+Q12_20,a,P_bubble,113.49195,kPa,explicit
+Q12_20,a,y_acetone,0.55167127,-,explicit
+Q12_20,a,y_methanol,0.3533631,-,explicit
+Q12_20,a,y_water,0.094965626,-,explicit
+Q12_20,b,P_dew,64.864676,kPa,converged (damped successive substitution)
+Q12_20,b,x_acetone,0.039121463,-,converged (damped successive substitution)
+Q12_20,b,x_methanol,0.24127999,-,converged (damped successive substitution)
+Q12_20,b,x_water,0.71959855,-,converged (damped successive substitution)
+Q12_20,c,flash pressure,89.178312,kPa,converged
+Q12_20,c,flash temperature,338.15,K,converged
+Q12_20,c,vapour fraction V,0.61108169,mol/mol,converged
+Q12_20,c,x_acetone,0.11879466,-,converged
+Q12_20,c,x_methanol,0.3755577,-,converged
+Q12_20,c,x_water,0.50564764,-,converged
+Q12_20,c,y_acetone,0.41532676,-,converged
+Q12_20,c,y_methanol,0.41555612,-,converged
+Q12_20,c,y_water,0.16911712,-,converged
+Q12_21,a,P_bubble,132.74934,kPa,explicit
+Q12_21,a,y_acetone,0.37749452,-,explicit
+Q12_21,a,y_methanol,0.45794884,-,explicit
+Q12_21,a,y_water,0.16455664,-,explicit
+Q12_21,b,P_dew,80.837806,kPa,converged (damped successive substitution)
+Q12_21,b,x_acetone,0.024081179,-,converged (damped successive substitution)
+Q12_21,b,x_methanol,0.016703504,-,converged (damped successive substitution)
+Q12_21,b,x_water,0.95921532,-,converged (damped successive substitution)
+Q12_21,c,flash pressure,106.79357,kPa,converged
+Q12_21,c,flash temperature,338.15,K,converged
+Q12_21,c,vapour fraction V,0.88818362,mol/mol,converged
+Q12_21,c,x_acetone,0.046384684,-,converged
+Q12_21,c,x_methanol,0.033215802,-,converged
+Q12_21,c,x_water,0.92039951,-,converged
+Q12_21,c,y_acetone,0.33192847,-,converged
+Q12_21,c,y_methanol,0.44617568,-,converged
+Q12_21,c,y_water,0.22189585,-,converged
+Q12_22,a,T_bubble,334.94837,K,converged (brentq)
+Q12_22,a,T_bubble,61.798375,degC,converged (brentq)
+Q12_22,a,y_acetone,0.5590379,-,converged (brentq)
+Q12_22,a,y_methanol,0.34858928,-,converged (brentq)
+Q12_22,a,y_water,0.092372813,-,converged (brentq)
+Q12_22,b,T_dew,349.08909,K,converged (brentq)
+Q12_22,b,T_dew,75.939086,degC,converged (brentq)
+Q12_22,b,x_acetone,0.047581725,-,converged (brentq)
+Q12_22,b,x_methanol,0.25475659,-,converged (brentq)
+Q12_22,b,x_water,0.69766169,-,converged (brentq)
+Q12_22,c,flash pressure,101.33,kPa,converged
+Q12_22,c,flash temperature,342.01873,K,converged
+Q12_22,c,vapour fraction V,0.38446825,mol/mol,converged
+Q12_22,c,x_acetone,0.13835807,-,converged
+Q12_22,c,x_methanol,0.19086906,-,converged
+Q12_22,c,x_water,0.67077287,-,converged
+Q12_22,c,y_acetone,0.55878792,-,converged
+Q12_22,c,y_methanol,0.21461859,-,converged
+Q12_22,c,y_water,0.22659349,-,converged
+Q12_23,a,T_bubble,330.92346,K,converged (brentq)
+Q12_23,a,T_bubble,57.773458,degC,converged (brentq)
+Q12_23,a,y_acetone,0.39135674,-,converged (brentq)
+Q12_23,a,y_methanol,0.45170301,-,converged (brentq)
+Q12_23,a,y_water,0.15694025,-,converged (brentq)
+Q12_23,b,T_dew,343.3865,K,converged (brentq)
+Q12_23,b,T_dew,70.236503,degC,converged (brentq)
+Q12_23,b,x_acetone,0.0271612,-,converged (brentq)
+Q12_23,b,x_methanol,0.018444583,-,converged (brentq)
+Q12_23,b,x_water,0.95439422,-,converged (brentq)
+Q12_23,c,flash pressure,101.33,kPa,converged
+Q12_23,c,flash temperature,337.15498,K,converged
+Q12_23,c,vapour fraction V,0.5933926,mol/mol,converged
+Q12_23,c,x_acetone,0.069462635,-,converged
+Q12_23,c,x_methanol,0.024886484,-,converged
+Q12_23,c,x_water,0.90565088,-,converged
+Q12_23,c,y_acetone,0.45796995,-,converged
+Q12_23,c,y_methanol,0.31999215,-,converged
+Q12_23,c,y_water,0.22203791,-,converged
+Q13_14,-,K at 923.15 K,1.3667228,-,explicit
+Q13_14,-,y styrene,0.2793831,-,converged (brentq)
+Q13_14,-,y hydrogen,0.51958873,-,converged (brentq)
+Q13_14,-,y ethylbenzene,0.20102817,-,converged (brentq)
+Q13_14,-,styrene conversion,41.845015,%,converged (brentq)
+Q13_18,a,"y 1,3-butadiene (given)",0.1,-,given
+Q13_18,a,y hydrogen,0.1,-,explicit
+Q13_18,a,y 1-butene,0.018586665,-,explicit
+Q13_18,a,y steam,0.78141334,-,explicit
+Q13_18,b,steam fed per mol 1-butene,6.5893862,mol/mol,explicit
+Q13_18,b,mole fraction of steam in feed,0.86823704,-,explicit
+Q13_20,a,"y NH3 at 1 bar, 300 K",0.93491407,-,converged (brentq)
+Q13_20,b,T for y = 0.5 at 1 bar,399.4993,K,converged (brentq)
+Q13_20,b,T for y = 0.5 at 1 bar,126.3493,degC,converged (brentq)
+Q13_20,c,"T for y = 0.5 at 100 bar, ideal gas",577.63946,K,converged (brentq)
+Q13_20,c,"T for y = 0.5 at 100 bar, ideal gas",304.48946,degC,converged (brentq)
+Q13_20,d,"T for y = 0.5 at 100 bar, ideal solution",584.52883,K,converged (brentq)
+Q13_20,d,"T for y = 0.5 at 100 bar, ideal solution",311.37883,degC,converged (brentq)
+Q13_29,-,K at 723.15 K,12.91687,-,explicit
+Q13_29,-,conversion of H2S,76.666834,%,converged (brentq)
+Q13_29,-,conversion of SO2,76.666834,%,converged (brentq)
+Q13_31,-,K,1.4969323,-,explicit
+Q13_31,-,"xB, non-ideal solution (G^E/RT = 0.1 xA xB)",0.60451683,-,converged (brentq)
+Q13_31,-,"xA, non-ideal solution",0.39548317,-,converged (brentq)
+Q13_31,-,"xB, ideal solution",0.59950857,-,explicit
+Q13_31,-,"xA, ideal solution",0.40049143,-,explicit
+Q13_31,-,error in xB from assuming ideal solution,-0.0050082573,mole fraction,explicit
+Q13_31,-,relative error in xB,-0.82847277,%,explicit

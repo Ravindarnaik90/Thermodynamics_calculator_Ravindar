@@ -1,0 +1,4 @@
+question,part,quantity,value,unit,solver_status
+Q12_14,diagram,P_sat water,20.007045,kPa,explicit (Antoine)
+Q12_14,diagram,P_sat acetone,115.15569,kPa,explicit (Antoine)
+Q12_14,diagram,diagram points,51,-,all points converged

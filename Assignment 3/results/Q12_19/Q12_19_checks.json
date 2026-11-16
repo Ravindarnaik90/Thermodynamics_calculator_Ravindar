@@ -1,0 +1,96 @@
+{
+ "question": "Q12_19",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(5.7e-14 kPa)"
+  },
+  {
+   "name": "bubble equation residual sum x gamma Psat - P = 0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve BUBL T agrees",
+   "passed": true,
+   "detail": "(336.019119 vs 336.019119 K)"
+  },
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(1.2e-11 kPa)"
+  },
+  {
+   "name": "dew equation residual sum y/(gamma Psat) - 1/P = 0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve DEW T agrees",
+   "passed": true,
+   "detail": "(363.763096 vs 363.763096 K)"
+  },
+  {
+   "name": "T_bubble < T_dew",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "flash converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= V <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1 and sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= x_i, y_i <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "component material balance z_i = V y_i + (1-V) x_i",
+   "passed": true,
+   "detail": "(max err 1.1e-16)"
+  },
+  {
+   "name": "equilibrium y_i = K_i x_i  (Eq. 10.5 residual)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve flash (different algorithm/start) agrees",
+   "passed": true,
+   "detail": "(V 0.45168861 vs 0.45168861)"
+  },
+  {
+   "name": "no azeotrope: alpha12 > 1 for all x1 (independent criterion)",
+   "passed": true,
+   "detail": "(min alpha12 = 1.1585)"
+  }
+ ],
+ "notes": [
+  "Antoine for acetone used at 62.87 C , outside stated range -13.0..55.0 C (extrapolation).",
+  "Antoine for acetone used at 90.61 C , outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}

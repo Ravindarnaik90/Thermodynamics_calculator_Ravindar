@@ -1,0 +1,107 @@
+# Question 12.18 - Wilson BUBL T / DEW T / flash / azeotrope, acetone(1)/water(2), P = 101.33 kPa
+
+*Generated 2026-11-11 by `Q12_18.py`*
+
+Parameter source: Smith, Van Ness & Abbott, 6th ed. (Antoine constants, molar volumes, Wilson and NRTL parameters as supplied by the student)
+> **Parameter provenance:** Smith, Van Ness & Abbott, 6th ed. (Antoine constants, molar volumes, Wilson and NRTL parameters as supplied by the student). Verified against book: **False**.
+
+
+## Problem statement
+
+Wilson equation: (a) BUBL T: P = 101.33 kPa, x1 = 0.3; (b) DEW T: P = 101.33 kPa, y1 = 0.3; (c) P,T-flash: P = 101.33 kPa, T = (T_bubble+T_dew)/2, z1 = 0.3; (d) if an azeotrope exists at P = 101.33 kPa find T_az and x1_az = y1_az. (system: acetone(1)/water(2), chosen by the student from the table) 
+
+
+## Model and governing equations
+
+    Eq. (10.5), modified Raoult's law:  y_i P = x_i gamma_i P_i^sat      (ideal vapour phase)
+    Antoine:  ln(P_i^sat/kPa) = A_i - B_i / (t/degC + C_i),  t = T - 273.15
+    Wilson:  Lambda_ij = (V_j/V_i) exp(-a_ij/RT),  Lambda_ii = 1
+             ln gamma_i = 1 - ln(sum_j x_j Lambda_ij) - sum_k [ x_k Lambda_ki / sum_j x_j Lambda_kj ]
+    Units: T in K inside all functions, P in kPa, R = 8.314 J/(mol K), a_ij and b_ij in J/mol
+
+## Given data
+
+- System = acetone(1)/water(2) 
+- P = 101.33 kPa
+- (a) x1 = 0.3 
+- (b) y1 = 0.3 
+- (c) z1 = 0.3 and T = (T_bubble + T_dew)/2
+
+## (a) BUBL T:  solve  f(T) = sum x_i gamma_i(T) Psat_i(T) - P = 0  (brentq, 250-430 K) ;  y_i = x_i gamma_i Psat_i / P
+
+- T = 335.821 K
+- t = 62.6713 deg C
+- P_sat (Antoine) = [acetone: 125.738029, water: 22.606543] kPa
+Wilson Lambda_ij = (Vj/Vi) exp(-a_ij/RT):
+
+|  | acetone | water |
+|---|---|---|
+| acetone | 1 | 0.157667 |
+| water | 0.467255 | 1 |
+
+- gamma at x=[0.3, 0.7] = [acetone: 2.160529, water: 1.253227] 
+- partial pressures at T_bubble = [acetone: 81.498207, water: 19.831793] kPa
+- [RESULT a] T_bubble = 335.821 K
+- [RESULT a] T_bubble = 62.6713 degC
+- [RESULT a] y_acetone = 0.804285 -
+- [RESULT a] y_water = 0.195715 -
+- **NOTE:** Antoine for acetone used at 62.67 C , outside stated range -13.0..55.0 C (extrapolation).
+- [PASS] sum y = 1 
+- [PASS] Eq.(10.5) residual (0.0e+00 kPa)
+- [PASS] bubble equation residual sum x gamma Psat - P = 0 
+- [PASS] independent fsolve BUBL T agrees (335.821325 vs 335.821325 K)
+
+## (b) DEW T:  solve  P_dew(T, y) - P = 0  (brentq; inner DEW P by damped successive substitution)
+
+- gamma at dew liquid = [acetone: 8.425805, water: 1.000809] 
+- [RESULT b] T_dew = 363.748 K
+- [RESULT b] T_dew = 90.5985 degC
+- [RESULT b] x_acetone = 0.0125011 -
+- [RESULT b] x_water = 0.987499 -
+- **NOTE:** Antoine for acetone used at 90.60 C , outside stated range -13.0..55.0 C (extrapolation).
+- [PASS] sum x = 1, sum y = 1 
+- [PASS] Eq.(10.5) residual (1.4e-11 kPa)
+- [PASS] dew equation residual sum y/(gamma Psat) - 1/P = 0 
+- [PASS] independent fsolve DEW T agrees (363.748490 vs 363.748490 K)
+- [PASS] T_bubble < T_dew 
+- T for flash = (T_bubble + T_dew)/2 = 349.785 K
+
+## (c) P,T-flash
+
+Material balance z_i = V y_i + (1-V) x_i with y_i = K_i x_i,  K_i = gamma_i Psat_i / P  =>  x_i = z_i/(1+V(K_i-1)).  Rachford-Rice: sum z_i(K_i-1)/(1+V(K_i-1)) = 0, solved with brentq; gamma updated with x until x converges (tol 1e-13).
+
+- flash P = 101.33 kPa
+- flash T = 349.785 K
+- z = [np.float64(0.3), np.float64(0.7)] 
+- P_bubble(z) and P_dew(z) at flash T = 158.229 kPa, 58.5227 kPa 
+- phase state = two-phase 
+- outer iterations = 31 
+- [RESULT c] flash pressure = 101.33 kPa
+- [RESULT c] flash temperature = 349.785 K
+- [RESULT c] vapour fraction V = 0.448765 mol/mol
+- [RESULT c] x_acetone = 0.0494566 -
+- [RESULT c] x_water = 0.950543 -
+- [RESULT c] y_acetone = 0.607753 -
+- [RESULT c] y_water = 0.392247 -
+- [PASS] flash converged 
+- [PASS] 0 <= V <= 1 
+- K_i = gamma_i Psat_i / P = [acetone: 12.288601, water: 0.412656] 
+- [PASS] sum x = 1 and sum y = 1 
+- [PASS] 0 <= x_i, y_i <= 1 
+- [PASS] component material balance z_i = V y_i + (1-V) x_i (max err 1.1e-16)
+- [PASS] equilibrium y_i = K_i x_i  (Eq. 10.5 residual) 
+- [PASS] independent fsolve flash (different algorithm/start) agrees (V 0.44876451 vs 0.44876451)
+
+## (d) Azeotrope at P:  condition x1 = y1 together with Eq.(10.5)  <=>  alpha12 = gamma1 Psat1/(gamma2 Psat2) = 1 at one x1 (along the bubble curve)
+
+- relative volatility alpha12 along bubble curve: min / max = 1.16544 / 33.9571 
+- [RESULT d] azeotrope exists = 0 (0 = no)
+- closest approach |y1-x1| (excluding pure-component ends) = 0.000144466 
+- at x1 = 0.999 
+- [PASS] no azeotrope: alpha12 > 1 for all x1 (independent criterion) (min alpha12 = 1.1654)
+Interpretation: an azeotrope requires alpha12 = 1 at some composition. alpha12 stays above 1 along the whole bubble curve, so no azeotrope exists at this pressure for the model.
+
+
+## Verification summary
+
+Checks passed: 17/17  -> overall: ALL PASSED

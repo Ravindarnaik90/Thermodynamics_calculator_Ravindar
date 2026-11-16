@@ -1,0 +1,33 @@
+{
+ "question": "Q13_31",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "equilibrium relation xB gB / (xA gA) = K",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "xA + xB = 1 and 0 < xB < 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "ln gamma_i = d(nG^E/RT)/dn_i agrees with the closed forms",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Gibbs-energy minimum of the mixture coincides with the K-equation root",
+   "passed": true,
+   "detail": "(minimum at xB = 0.60451683)"
+  },
+  {
+   "name": "Gibbs-energy minimum (ideal) coincides with K/(1+K)",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "notes": [],
+ "parameters_verified": false
+}

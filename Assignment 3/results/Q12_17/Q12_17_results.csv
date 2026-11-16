@@ -1,0 +1,15 @@
+question,part,quantity,value,unit,solver_status
+Q12_17,a,P_bubble,91.729357,kPa,explicit
+Q12_17,a,y_acetone,0.80722216,-,explicit
+Q12_17,a,y_water,0.19277784,-,explicit
+Q12_17,b,P_dew,28.379278,kPa,converged (damped successive substitution)
+Q12_17,b,x_acetone,0.0073423356,-,converged (damped successive substitution)
+Q12_17,b,x_water,0.99265766,-,converged (damped successive substitution)
+Q12_17,c,flash pressure,60.054317,kPa,converged
+Q12_17,c,flash temperature,333.15,K,converged
+Q12_17,c,vapour fraction V,0.3945589,mol/mol,converged
+Q12_17,c,x_acetone,0.052091857,-,converged
+Q12_17,c,x_water,0.94790814,-,converged
+Q12_17,c,y_acetone,0.68040906,-,converged
+Q12_17,c,y_water,0.31959094,-,converged
+Q12_17,d,azeotrope exists,0,(0 = no),scan of 600 points: no sign change of y1-x1

@@ -1,0 +1,8 @@
+question,part,quantity,value,unit,solver_status
+Q13_20,a,"y NH3 at 1 bar, 300 K",0.93491407,-,converged (brentq)
+Q13_20,b,T for y = 0.5 at 1 bar,399.4993,K,converged (brentq)
+Q13_20,b,T for y = 0.5 at 1 bar,126.3493,degC,converged (brentq)
+Q13_20,c,"T for y = 0.5 at 100 bar, ideal gas",577.63946,K,converged (brentq)
+Q13_20,c,"T for y = 0.5 at 100 bar, ideal gas",304.48946,degC,converged (brentq)
+Q13_20,d,"T for y = 0.5 at 100 bar, ideal solution",584.52883,K,converged (brentq)
+Q13_20,d,"T for y = 0.5 at 100 bar, ideal solution",311.37883,degC,converged (brentq)

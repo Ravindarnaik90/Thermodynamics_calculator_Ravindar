@@ -1,0 +1,7 @@
+question,part,quantity,value,unit,solver_status
+Q13_18,a,"y 1,3-butadiene (given)",0.1,-,given
+Q13_18,a,y hydrogen,0.1,-,explicit
+Q13_18,a,y 1-butene,0.018586665,-,explicit
+Q13_18,a,y steam,0.78141334,-,explicit
+Q13_18,b,steam fed per mol 1-butene,6.5893862,mol/mol,explicit
+Q13_18,b,mole fraction of steam in feed,0.86823704,-,explicit

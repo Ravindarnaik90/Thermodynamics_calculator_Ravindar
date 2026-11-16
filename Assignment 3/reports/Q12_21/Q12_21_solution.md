@@ -1,0 +1,109 @@
+# Question 12.21 - NRTL BUBL P / DEW P / flash, acetone(1)/methanol(2)/water(3), T = 338.15 K
+
+*Generated 2026-11-11 by `Q12_21.py`*
+
+Parameter source: Smith, Van Ness & Abbott, 6th ed. (Antoine constants, molar volumes, Wilson and NRTL parameters as supplied by the student)
+> **Parameter provenance:** Smith, Van Ness & Abbott, 6th ed. (Antoine constants, molar volumes, Wilson and NRTL parameters as supplied by the student). Verified against book: **False**.
+
+
+## Problem statement
+
+Work 12.20 for the NRTL equation. Acetone(1)/methanol(2)/water(3). 
+
+
+## Model and governing equations
+
+    Eq. (10.5), modified Raoult's law:  y_i P = x_i gamma_i P_i^sat      (ideal vapour phase)
+    Antoine:  ln(P_i^sat/kPa) = A_i - B_i / (t/degC + C_i),  t = T - 273.15
+    NRTL:  tau_ij = b_ij/RT,  G_ij = exp(-alpha_ij tau_ij),  tau_ii = 0, G_ii = 1
+           ln gamma_i = sum_j x_j tau_ji G_ji / sum_k x_k G_ki
+                        + sum_j [ x_j G_ij / sum_k x_k G_kj ] ( tau_ij - sum_m x_m tau_mj G_mj / sum_k x_k G_kj )
+    Units: T in K inside all functions, P in kPa, R = 8.314 J/(mol K), a_ij and b_ij in J/mol
+
+## Given data
+
+- System = acetone(1)/methanol(2)/water(3) 
+- T = 338.15 K (65 degC)
+- (a) x1, x2, x3 = 1 - x1 - x2 = [np.float64(0.3), np.float64(0.4), np.float64(0.3)] 
+- (b) y1, y2, y3 = 1 - y1 - y2 = [np.float64(0.3), np.float64(0.4), np.float64(0.3)] 
+- (c) z1, z2, z3 = 1 - z1 - z2 = [np.float64(0.3), np.float64(0.4), np.float64(0.3)] and P = (P_bubble + P_dew)/2
+- **NOTE:** Antoine for acetone used at 65.00 C , outside stated range -13.0..55.0 C (extrapolation).
+
+## (a) BUBL P:  P = sum x_i gamma_i Psat_i ;  y_i = x_i gamma_i Psat_i / P   (complete ternary model, all three binary pairs)
+
+- T = 338.15 K
+- t = 65 deg C
+- P_sat (Antoine) = [acetone: 135.575914, methanol: 102.530309, water: 25.101354] kPa
+NRTL tau_ij = b_ij/RT:
+
+|  | acetone | methanol | water |
+|---|---|---|---|
+| acetone | 0 | 0.275061 | 0.939788 |
+| methanol | 0.331545 | 0 | 1.25871 |
+| water | 1.78322 | 2.43724 | 0 |
+
+NRTL G_ij = exp(-alpha tau_ij):
+
+|  | acetone | methanol | water |
+|---|---|---|---|
+| acetone | 1 | 0.91867 | 0.605241 |
+| methanol | 0.902805 | 1 | 0.686014 |
+| water | 0.38567 | 0.482049 | 1 |
+
+- gamma at x=[0.3, 0.4, 0.3] = [acetone: 1.232081, methanol: 1.482303, water: 2.900877] 
+- partial pressures x_i gamma_i Psat_i = [acetone: 50.112149, methanol: 60.792406, water: 21.844785] kPa
+- [RESULT a] P_bubble = 132.749 kPa
+- [RESULT a] y_acetone = 0.377495 -
+- [RESULT a] y_methanol = 0.457949 -
+- [RESULT a] y_water = 0.164557 -
+- [PASS] sum x = 1, sum y = 1 
+- [PASS] Eq.(10.5) residual (0.0e+00 kPa)
+- [PASS] reverse: DEW P at y_bubble returns same P and x 
+
+## (b) DEW P:  P = 1/sum(y_i/(gamma_i Psat_i)) ;  x_i = y_i P/(gamma_i Psat_i)  (iterated)
+
+- gamma at dew liquid = [acetone: 7.428061, methanol: 18.880550, water: 1.007216] 
+- [RESULT b] P_dew = 80.8378 kPa
+- [RESULT b] x_acetone = 0.0240812 -
+- [RESULT b] x_methanol = 0.0167035 -
+- [RESULT b] x_water = 0.959215 -
+- [PASS] DEW P converged 
+- [PASS] sum x = 1, sum y = 1 
+- [PASS] Eq.(10.5) residual (1.9e-11 kPa)
+- [PASS] independent fsolve DEW P agrees (80.837806 vs 80.837806 kPa)
+- [PASS] P_dew < P_bubble 
+- P for flash = (P_bubble + P_dew)/2 = 106.794 kPa
+
+## (c) P,T-flash
+
+Material balance z_i = V y_i + (1-V) x_i with y_i = K_i x_i,  K_i = gamma_i Psat_i / P  =>  x_i = z_i/(1+V(K_i-1)).  Rachford-Rice: sum z_i(K_i-1)/(1+V(K_i-1)) = 0, solved with brentq; gamma updated with x until x converges (tol 1e-13).
+
+- flash P = 106.794 kPa
+- flash T = 338.15 K
+- z = [np.float64(0.3), np.float64(0.4), np.float64(0.3)] 
+- P_bubble(z) and P_dew(z) at flash T = 132.749 kPa, 80.8378 kPa 
+- phase state = two-phase 
+- outer iterations = 50 
+- [RESULT c] flash pressure = 106.794 kPa
+- [RESULT c] flash temperature = 338.15 K
+- [RESULT c] vapour fraction V = 0.888184 mol/mol
+- [RESULT c] x_acetone = 0.0463847 -
+- [RESULT c] x_methanol = 0.0332158 -
+- [RESULT c] x_water = 0.9204 -
+- [RESULT c] y_acetone = 0.331928 -
+- [RESULT c] y_methanol = 0.446176 -
+- [RESULT c] y_water = 0.221896 -
+- [PASS] flash converged 
+- [PASS] 0 <= V <= 1 
+- K_i = gamma_i Psat_i / P = [acetone: 7.155993, methanol: 13.432633, water: 0.241086] 
+- [PASS] sum x = 1 and sum y = 1 
+- [PASS] 0 <= x_i, y_i <= 1 
+- [PASS] component material balance z_i = V y_i + (1-V) x_i (max err 5.6e-17)
+- [PASS] equilibrium y_i = K_i x_i  (Eq. 10.5 residual) 
+- [PASS] independent fsolve flash (different algorithm/start) agrees (V 0.88818362 vs 0.88818362)
+(No azeotrope part is asked in this question.)
+
+
+## Verification summary
+
+Checks passed: 15/15  -> overall: ALL PASSED

@@ -1,0 +1,60 @@
+{
+ "question": "Q13_29",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "ln K(298.15) = -dG298/(R T0)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "analytic integrals agree with numerical quadrature",
+   "passed": true,
+   "detail": "(max |diff in ln K| = 3.6e-15)"
+  },
+  {
+   "name": "van't Hoff relation d ln K/dT = dH/(R T^2)",
+   "passed": true,
+   "detail": "(max abs deviation 3.1e-12)"
+  },
+  {
+   "name": "sum of gas mole fractions = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "equilibrium relation y_W^2/(y_H2S^2 y_SO2 P) = K",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "S balance: S in = S out",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "O balance: O in = O out",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "H balance: H in = H out",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve gives the same extent",
+   "passed": true,
+   "detail": "(e = 0.7666683385, residual 4.4e-16)"
+  },
+  {
+   "name": "0 <= e <= 1",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "notes": [
+  "Elemental sulfur is treated as a pure solid, as stated in the problem. At 723 K real sulfur is a liquid/vapour; the solid heat capacity (Table C.2) is therefore extrapolated beyond its stated range."
+ ],
+ "parameters_verified": false
+}

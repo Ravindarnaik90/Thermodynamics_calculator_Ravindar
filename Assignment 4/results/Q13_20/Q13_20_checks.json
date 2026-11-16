@@ -1,0 +1,58 @@
+{
+ "question": "Q13_20",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "ln K(298.15) = -dG298/(R T0)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "analytic integrals agree with numerical quadrature",
+   "passed": true,
+   "detail": "(max |diff in ln K| = 8.9e-16)"
+  },
+  {
+   "name": "van't Hoff relation d ln K/dT = dH/(R T^2)",
+   "passed": true,
+   "detail": "(max abs deviation 1.8e-12)"
+  },
+  {
+   "name": "(a) y satisfies K P = y/(C (1-y)^2)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "(b) forward: y(T_b, 1 bar) = 0.50",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "(c) forward: y(T_c, 100 bar, ideal gas) = 0.50",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "(d) forward: y(T_d, 100 bar, ideal solution) = 0.50",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "composition sums to 1 at (a): y_N2 + y_H2 + y_NH3 = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "higher pressure raises the temperature at which y = 0.5 (Le Chatelier): T_c > T_b",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "virial correlation applicable: all Pr/Tr values moderate at solution",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "notes": [],
+ "parameters_verified": false
+}

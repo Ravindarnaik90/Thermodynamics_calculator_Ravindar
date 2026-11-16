@@ -1,0 +1,35 @@
+{
+ "question": "Q12_15",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "0 <= y1 <= 1 everywhere",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "acetone is the more volatile species: y1 > x1 on 0<x1<1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "pure-component endpoints: T_bubble(0) = Tsat(water), T_bubble(1) = Tsat(acetone)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "dew T at y(bubble) reproduces bubble T (independent algorithm)",
+   "passed": true,
+   "detail": "(max diff 6.20e-12 K)"
+  },
+  {
+   "name": "Gibbs-Duhem consistency (model identity)",
+   "passed": true,
+   "detail": "(max |sum x dln\u03b3| = 5.6e-11)"
+  }
+ ],
+ "notes": [
+  "Antoine for acetone used at 56.20 C (bubble/dew range at this P), outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}

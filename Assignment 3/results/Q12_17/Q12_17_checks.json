@@ -1,0 +1,90 @@
+{
+ "question": "Q12_17",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual y_i P - x_i gamma_i Psat_i = 0",
+   "passed": true,
+   "detail": "(0.0e+00 kPa)"
+  },
+  {
+   "name": "reverse: DEW P at y_bubble returns same P and x",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "DEW P converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(4.7e-12 kPa)"
+  },
+  {
+   "name": "independent fsolve DEW P agrees",
+   "passed": true,
+   "detail": "(28.379278 vs 28.379278 kPa)"
+  },
+  {
+   "name": "P_dew < P_bubble (two-phase region exists for z = 0.3)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "flash converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= V <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1 and sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= x_i, y_i <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "component material balance z_i = V y_i + (1-V) x_i",
+   "passed": true,
+   "detail": "(max err 0.0e+00)"
+  },
+  {
+   "name": "equilibrium y_i = K_i x_i  (Eq. 10.5 residual)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve flash (different algorithm/start) agrees",
+   "passed": true,
+   "detail": "(V 0.39455890 vs 0.39455890)"
+  },
+  {
+   "name": "no azeotrope: alpha12 > 1 for all x1 (independent criterion)",
+   "passed": true,
+   "detail": "(min alpha12 = 1.1142)"
+  }
+ ],
+ "notes": [
+  "Antoine for acetone used at 60.00 C , outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}

@@ -1,0 +1,6 @@
+question,part,quantity,value,unit,solver_status
+Q13_14,-,K at 923.15 K,1.3667228,-,explicit
+Q13_14,-,y styrene,0.2793831,-,converged (brentq)
+Q13_14,-,y hydrogen,0.51958873,-,converged (brentq)
+Q13_14,-,y ethylbenzene,0.20102817,-,converged (brentq)
+Q13_14,-,styrene conversion,41.845015,%,converged (brentq)

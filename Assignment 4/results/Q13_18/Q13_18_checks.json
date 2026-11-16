@@ -1,0 +1,43 @@
+{
+ "question": "Q13_18",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "ln K(298.15) = -dG298/(R T0)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "analytic integrals agree with numerical quadrature",
+   "passed": true,
+   "detail": "(max |diff in ln K| = 8.9e-16)"
+  },
+  {
+   "name": "van't Hoff relation d ln K/dT = dH/(R T^2)",
+   "passed": true,
+   "detail": "(max abs deviation 1.7e-12)"
+  },
+  {
+   "name": "sum of product mole fractions = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "equilibrium relation y_B y_H2 P/y_C4 = K",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "steam feed is positive (s > 0)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "forward check: that feed gives y_butadiene = 0.10 at equilibrium (independent brentq)",
+   "passed": true,
+   "detail": "(y_B = 0.1000000000)"
+  }
+ ],
+ "notes": [],
+ "parameters_verified": false
+}

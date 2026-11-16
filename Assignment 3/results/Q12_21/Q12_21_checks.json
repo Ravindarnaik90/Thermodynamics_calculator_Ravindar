@@ -1,0 +1,85 @@
+{
+ "question": "Q12_21",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(0.0e+00 kPa)"
+  },
+  {
+   "name": "reverse: DEW P at y_bubble returns same P and x",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "DEW P converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1, sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Eq.(10.5) residual",
+   "passed": true,
+   "detail": "(1.9e-11 kPa)"
+  },
+  {
+   "name": "independent fsolve DEW P agrees",
+   "passed": true,
+   "detail": "(80.837806 vs 80.837806 kPa)"
+  },
+  {
+   "name": "P_dew < P_bubble",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "flash converged",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= V <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum x = 1 and sum y = 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "0 <= x_i, y_i <= 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "component material balance z_i = V y_i + (1-V) x_i",
+   "passed": true,
+   "detail": "(max err 5.6e-17)"
+  },
+  {
+   "name": "equilibrium y_i = K_i x_i  (Eq. 10.5 residual)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "independent fsolve flash (different algorithm/start) agrees",
+   "passed": true,
+   "detail": "(V 0.88818362 vs 0.88818362)"
+  }
+ ],
+ "notes": [
+  "Antoine for acetone used at 65.00 C , outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}

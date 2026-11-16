@@ -1,0 +1,35 @@
+{
+ "question": "Q12_14",
+ "all_checks_passed": true,
+ "checks": [
+  {
+   "name": "0 <= y1 <= 1 everywhere",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "acetone is the more volatile species: y1 > x1 on 0<x1<1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "pure-component endpoints: bubble P(x1->0) = Psat(water), P(x1->1) = Psat(acetone)",
+   "passed": true,
+   "detail": "(P_sat water 20.0070, acetone 115.1557 kPa)"
+  },
+  {
+   "name": "dew P at y(bubble) reproduces bubble P (independent algorithm)",
+   "passed": true,
+   "detail": "(max diff 4.26e-14 kPa)"
+  },
+  {
+   "name": "Gibbs-Duhem consistency (model identity)",
+   "passed": true,
+   "detail": "(max |sum x dln\u03b3| = 4.2e-11)"
+  }
+ ],
+ "notes": [
+  "Antoine for acetone used at 60.00 C , outside stated range -13.0..55.0 C (extrapolation)."
+ ],
+ "parameters_verified": false
+}
